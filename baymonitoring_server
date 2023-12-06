@@ -1,0 +1,10 @@
+server {
+        listen 8871;
+        location / {
+                proxy_pass http://0.0.0.0:9983;
+        }
+
+        location /static/ {
+                alias /BayMointor/LabMonitor/src/baymonitoring/static/;
+        }
+}

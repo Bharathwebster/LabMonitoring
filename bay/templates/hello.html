@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+</style>
+</head>
+<body>
+
+<h2>Console Tools</h2>
+
+<table>
+  <tr>
+    <th>Console Name</th>
+    <th>Tool Name</th>
+    <th>Tool Status</th>
+    <th>Tool id</th>
+  </tr>
+  {% for tool in tools %}
+  <tr>
+    <td>{{tool.bay.name|title}}</td>
+    <td>{{tool.name|title}}</td>
+    <td>{{tool.get_status_display}}</td>
+    <td>{{tool.id}}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+</body>
+</html>
